@@ -63,8 +63,14 @@ test('success: build writes an offline page with every asset, matching the commi
     for (const asset of assets) assert.ok(existsSync(join(out, asset)), `${asset} present in dist/`);
 
     assert.equal(html, readFileSync(join(repo, 'dist', 'index.html'), 'utf8'), 'committed dist/index.html is stale: run npm run build');
+    assert.equal(css, readFileSync(join(repo, 'dist', 'styles.css'), 'utf8'), 'committed dist/styles.css is stale: run npm run build');
   } finally {
     unlinkSync(link); // remove the junction itself before deleting the folder
     rmSync(dir, { recursive: true, force: true });
   }
+});
+
+test('content: the two headline lines read as the tagline, so they cannot drift apart', () => {
+  const content = JSON.parse(readFileSync(join(repo, 'src', 'content.json'), 'utf8'));
+  assert.equal(`${content.hero.titleLine1} ${content.hero.titleLine2}`, content.tagline);
 });
