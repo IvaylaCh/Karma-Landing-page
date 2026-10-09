@@ -57,7 +57,8 @@ test('success: build writes an offline page with every asset, matching the commi
     for (const font of ['Geologica-Sharp-Variable.woff2', 'OverpassMono-Variable.woff2']) {
       assert.ok(existsSync(join(out, font)), `${font} copied`);
     }
-    const assets = [...html.matchAll(/\s(?:src|href)="([^"]+)"/g)].map((m) => m[1]);
+    // In-page links such as "#how" point at sections, not files.
+    const assets = [...html.matchAll(/\s(?:src|href)="([^"#][^"]*)"/g)].map((m) => m[1]);
     assert.ok(assets.length > 0);
     for (const asset of assets) assert.ok(existsSync(join(out, asset)), `${asset} present in dist/`);
 

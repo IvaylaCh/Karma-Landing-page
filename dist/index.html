@@ -9,7 +9,39 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body class="min-h-screen flex flex-col">
-    <main class="flex-1"></main>
+    <main class="flex-1">
+      <!-- Main section: the one dark place. The text column and the dot light are
+           siblings in the flow, so the light always sits below the text, never under it. -->
+      <section id="top" class="hero" aria-labelledby="hero-title">
+        <div class="hero-column">
+          <header class="header-bar">
+            <img src="karma-lockup-solid.svg" alt="Karma" width="113" height="28" class="block h-7 w-auto flex-none">
+            <span class="header-divider max-[900px]:hidden" aria-hidden="true"></span>
+            <p class="header-descriptor max-[900px]:hidden">[Descriptor: four words]</p>
+            <nav aria-label="Page" class="flex flex-auto items-center justify-end gap-3">
+              <a href="#how" class="header-link header-link-secondary max-[600px]:hidden">How it works<svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" class="block flex-none"><path d="M5.5 8l4.5 4.5L14.5 8"/></svg></a>
+              <a href="#demo" class="header-link header-link-primary">Try the demo<svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" class="block flex-none max-[420px]:hidden"><path d="M4 10h11M10.5 5.5L15 10l-4.5 4.5"/></svg></a>
+            </nav>
+          </header>
+
+          <h1 id="hero-title" class="hero-title"><span class="block">Every criterion cited.</span> <span class="block">Nothing inferred.</span></h1>
+          <p class="hero-support">[Support line under the headline: one sentence of about eighteen words for coordinators]</p>
+          <a href="#demo" class="hero-button">Try the demo</a>
+        </div>
+
+        <div class="dot-light" aria-hidden="true">
+          <div class="dot-field">
+            <div class="dot-glow"></div>
+            <div class="dot-layer dot-layer-1"></div>
+            <div class="dot-layer dot-layer-2"></div>
+            <div class="dot-layer dot-layer-3"></div>
+            <div class="dot-layer dot-layer-4"></div>
+            <div class="dot-layer dot-layer-5"></div>
+            <div class="dot-sweep"></div>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <footer class="border-t border-line bg-surface">
       <div class="mx-auto max-w-landing px-side py-5 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-5 text-small text-ink-secondary">

@@ -8,7 +8,8 @@
   },
   "action": "Try the demo",
   "nav": {
-    "howItWorks": "How it works"
+    "howItWorks": "How it works",
+    "label": "Page"
   },
   "tagline": "Every criterion cited. Nothing inferred.",
   "badge": {
@@ -27,6 +28,8 @@
     "descriptor": "[Descriptor: four words]"
   },
   "hero": {
+    "titleLine1": "Every criterion cited.",
+    "titleLine2": "Nothing inferred.",
     "support": "[Support line under the headline: one sentence of about eighteen words for coordinators]"
   },
   "howItWorks": {

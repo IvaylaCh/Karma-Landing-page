@@ -16,4 +16,268 @@
   body {
     @apply bg-page text-ink font-sans;
   }
+
+  /* Focus: one solid 2px accent ring, 2px outside every focusable element, on light and dark. */
+  :focus-visible {
+    outline: 2px solid var(--color-focus-ring);
+    outline-offset: 2px;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Main section (#top): dark ground, floating header, headline, one action,
+   and the dot light. Values from DESIGN.md, layout from board A, light from board B.
+   --------------------------------------------------------------------------- */
+@layer components {
+  .hero {
+    position: relative;
+    overflow: hidden; /* the light never causes a sideways scroll */
+    display: flex;
+    flex-direction: column;
+    background: var(--color-brand-ground);
+    color: var(--color-brand-ink);
+  }
+
+  /* The text column sits on top of the light, in the flow. */
+  .hero-column {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: var(--container-landing);
+    margin-inline: auto;
+    padding: 24px var(--spacing-side) 0;
+  }
+
+  /* Floating light header bar: the one raised element. It scrolls with the page. */
+  .header-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px 20px;
+    min-height: 68px;
+    padding: 10px 12px 10px 24px;
+    border: 1px solid rgb(255 255 255 / 0.7);
+    border-radius: 28px;
+    background: linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--color-page) 96%, transparent) 0%,
+      color-mix(in srgb, var(--color-ice) 94%, transparent) 100%
+    );
+    box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.9), 0 14px 36px rgb(0 0 0 / 0.4);
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+    color: var(--color-ink);
+  }
+
+  .header-divider {
+    display: block;
+    flex: none;
+    width: 1px;
+    height: 24px;
+    background: var(--color-line-strong);
+  }
+
+  .header-descriptor {
+    font-size: var(--text-label);
+    line-height: var(--text-label--line-height);
+    font-weight: var(--text-label--font-weight);
+    letter-spacing: var(--text-label--letter-spacing);
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: var(--color-ink-secondary);
+  }
+
+  .header-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    height: 46px;
+    padding: 0 16px;
+    border-radius: 16px;
+    font-size: var(--text-body);
+    line-height: var(--text-body--line-height);
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .header-link-secondary {
+    border: 1px solid var(--color-control);
+    background: var(--color-surface);
+    color: var(--color-ink);
+  }
+  .header-link-secondary:hover {
+    border-color: var(--color-control-hover);
+    background: var(--color-surface-sunken);
+  }
+
+  .header-link-primary {
+    background: var(--color-action);
+    color: var(--color-action-ink);
+  }
+  .header-link-primary:hover {
+    background: var(--color-action-hover);
+  }
+
+  .hero-title {
+    margin-top: 68px;
+    font-size: clamp(44px, 6.6vw, 96px);
+    line-height: 1.06;
+    font-weight: var(--text-hero--font-weight);
+    letter-spacing: var(--text-hero--letter-spacing);
+  }
+
+  .hero-support {
+    margin-top: 24px;
+    max-width: 460px;
+    font-size: 20px;
+    line-height: 30px;
+    text-wrap: balance;
+  }
+
+  .hero-button {
+    display: inline-flex;
+    align-items: center;
+    height: 52px;
+    margin-top: 36px;
+    padding: 0 26px;
+    border-radius: 10px;
+    background: var(--color-brand-action);
+    color: var(--color-brand-action-ink);
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .hero-button:hover {
+    background: var(--color-white);
+  }
+
+  /* ---- The dot light ------------------------------------------------------
+     A box in the flow under the text column, so no dot can sit under text.
+     Desktop: it fills the rest of the 900px section; the field covers the right
+     two-thirds and is anchored to the bottom edge. Every mask fades to nothing at
+     the top of the box, so the light is strongest low down and fades upward. */
+  .dot-light {
+    position: relative;
+    flex: 1 1 auto;
+    min-height: 300px;
+    margin-top: 48px;
+    pointer-events: none;
+  }
+
+  .dot-field {
+    --mx: 58%; /* where the core sits across the field */
+    position: absolute;
+    inset: 0 0 0 33.333%;
+  }
+
+  .dot-glow,
+  .dot-layer,
+  .dot-sweep {
+    position: absolute;
+    inset: 0;
+  }
+
+  /* brand-glow at about 70%, behind the dots only. */
+  .dot-glow {
+    background: radial-gradient(
+      ellipse 62% 92% at var(--mx) 100%,
+      color-mix(in srgb, var(--color-brand-glow) 70%, transparent) 0%,
+      transparent 72%
+    );
+  }
+
+  /* One dot grid on a 10px pitch. Each layer sets its dot radius, colour and
+     mask size; inner layers have bigger, paler dots and smaller masks. */
+  .dot-layer {
+    background-image: radial-gradient(
+      circle at 5px 5px,
+      var(--dot-c) 0 var(--dot-r),
+      transparent calc(var(--dot-r) + 0.7px)
+    );
+    background-size: 10px 10px;
+    background-position: left bottom;
+    -webkit-mask-image: radial-gradient(ellipse var(--mask-w) var(--mask-h) at var(--mx) 100%, #000 0%, rgb(0 0 0 / 0.55) 50%, transparent 100%);
+    mask-image: radial-gradient(ellipse var(--mask-w) var(--mask-h) at var(--mx) 100%, #000 0%, rgb(0 0 0 / 0.55) 50%, transparent 100%);
+  }
+  .dot-layer-1 { --dot-r: 1.1px; --dot-c: var(--color-brand-dot-1); --mask-w: 72%; --mask-h: 100%; }
+  .dot-layer-2 { --dot-r: 1.7px; --dot-c: var(--color-brand-dot-2); --mask-w: 57%; --mask-h: 84%; }
+  .dot-layer-3 { --dot-r: 2.4px; --dot-c: var(--color-brand-dot-3); --mask-w: 43%; --mask-h: 67%; }
+  .dot-layer-4 { --dot-r: 3px; --dot-c: var(--color-brand-dot-4); --mask-w: 30%; --mask-h: 50%; }
+  .dot-layer-5 { --dot-r: 3.5px; --dot-c: var(--color-brand-dot-5); --mask-w: 18%; --mask-h: 34%; }
+
+  /* The sweep: brighter 2.4px dots, seen only through a narrow vertical band that
+     crosses the field from -15% to 115% of its width. Two masks are intersected,
+     the moving band and the light's own outline, so the sweep stays inside the light.
+     A mask position in % is a share of (field width - band width), so for a band
+     30% wide: centre at -15% -> -42.86%, centre at 115% -> 142.86%. */
+  .dot-sweep {
+    background-image: radial-gradient(
+      circle at 5px 5px,
+      var(--color-brand-dot-5) 0 2.4px,
+      transparent 3.1px
+    );
+    background-size: 10px 10px;
+    background-position: left bottom;
+    -webkit-mask-image:
+      linear-gradient(90deg, transparent 0%, #000 50%, transparent 100%),
+      radial-gradient(ellipse 72% 100% at var(--mx) 100%, #000 0%, rgb(0 0 0 / 0.55) 50%, transparent 100%);
+    mask-image:
+      linear-gradient(90deg, transparent 0%, #000 50%, transparent 100%),
+      radial-gradient(ellipse 72% 100% at var(--mx) 100%, #000 0%, rgb(0 0 0 / 0.55) 50%, transparent 100%);
+    -webkit-mask-size: 30% 100%, 100% 100%;
+    mask-size: 30% 100%, 100% 100%;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: -42.86% 0, 0 0;
+    mask-position: -42.86% 0, 0 0;
+    -webkit-mask-composite: source-in;
+    mask-composite: intersect;
+    animation: dot-sweep 8.5s infinite;
+  }
+
+  /* Desktop: the section is at least 900px tall. */
+  @media (width >= 1024px) {
+    .hero {
+      min-height: 900px;
+    }
+  }
+
+  /* Below 1024px the light changes shape: a low, wide band under the button,
+     across the full width, centred. */
+  @media (width < 1024px) {
+    .dot-light {
+      flex: none;
+      height: 200px;
+      min-height: 0;
+      margin-top: 40px;
+    }
+    .dot-field {
+      --mx: 50%;
+      inset: 0;
+    }
+  }
+
+  /* Reduced motion: the sweep is gone and nothing on the page moves. */
+  @media (prefers-reduced-motion: reduce) {
+    .dot-sweep {
+      animation: none;
+      display: none;
+    }
+  }
+}
+
+/* About 7 s of eased travel in an 8.5 s cycle (7 / 8.5 = 82.35%), then a pause off the field. */
+@keyframes dot-sweep {
+  0% {
+    -webkit-mask-position: -42.86% 0, 0 0;
+    mask-position: -42.86% 0, 0 0;
+    animation-timing-function: cubic-bezier(0.37, 0, 0.63, 1);
+  }
+  82.35%,
+  100% {
+    -webkit-mask-position: 142.86% 0, 0 0;
+    mask-position: 142.86% 0, 0 0;
+  }
 }
