@@ -35,7 +35,7 @@ None yet. When the app code lands, list the install, run, test and lint commands
 - Every screen ends with the footer sentence, word for word: "Karma organizes and cites documents. It does not interpret, recommend or decide."
 - Ranks are not scores: no percentages, stars or bars next to a rank.
 - No exclamation marks, no emoji, no claims about intelligence.
-- One primary button per view. On the landing page the same single action, "Try the demo", repeats down the page.
+- One primary button per view. On the landing page the single page-level action is "Try the demo": the header, the hero and the closing band repeat it, and it scrolls to the demo card. The card's own button, "Find trials", starts the demo (design system, DemoCaseCard).
 
 ## Look
 
@@ -68,6 +68,7 @@ None yet. When the app code lands, list the install, run, test and lint commands
 
 The Karma design system (tokens, components and the full rules) is kept in Claude Design. This file is a summary of it. If this file and the design system disagree, the design system wins; tell the maintainer. Export `tokens.json` from the design system into the repo when the app starts, so the code and the design use the same values.
 
-## Open question
+## Exclusion criteria
 
-- Exclusion criteria. Shown as written, "met" on an exclusion means the documents support the exclusion, and its teal pill could read as reassurance. Settle how exclusions are worded before the build-day screens ship. Until then, do not show "met" on an exclusion row in the landing page or demo.
+- On the landing page, never show "met" on an exclusion row. The one exclusion example is "needs a clinician", as in the design.
+- In the app, keep the trial's own wording: rewriting an exclusion as a positive statement would be interpreting. Label the row "Exclusion" and add a line saying what the state means there, such as "The documents support this exclusion". Do this for every state, because a red "not met" on an exclusion reads the wrong way too.
