@@ -5,7 +5,7 @@ The sections in page order, what each holds, and which strings are fixed. Fixed 
 | # | Section | CAP | Ground | Holds | Design system parts |
 | --- | --- | --- | --- | --- | --- |
 | 1 | Header | CAP-1 | light bar, floating, rounded | solid lockup, descriptor, "How it works" link, "Try the demo" | Wordmark, TextLink, Button |
-| 2 | Main section | CAP-2 | dark, `brand-*` tokens, dot light | headline (`hero`), tagline, short lead, "Try the demo" | Wordmark (reversed) |
+| 2 | Main section | CAP-2 | dark, `brand-*` tokens, dot light | the tagline as headline (`hero`), one support line, "Try the demo" | Wordmark (reversed) |
 | 3 | How it works | CAP-3 | light | four numbered steps, a title and one or two sentences each | — |
 | 4 | The four states | CAP-4 | light | the state legend; optional example rows (no "met" on an exclusion; the one exclusion example is "needs a clinician") | StateLegend, StatePill |
 | 5 | The demo | CAP-5 | light | demo case card; the target of every "Try the demo" | DemoCaseCard, DemoBadge, SourceChip, Button |

@@ -2,6 +2,8 @@
 id: SPEC-karma-landing-page
 companions:
   - page-sections.md
+  - ../../planning-artifacts/ux-designs/ux-karma-landing-page-2026-10-09/DESIGN.md
+  - ../../planning-artifacts/ux-designs/ux-karma-landing-page-2026-10-09/EXPERIENCE.md
   - ../../../CLAUDE.md
   - ../../../design-system/README.md
   - ../../../design-system/1-dos-and-donts.md
@@ -25,7 +27,7 @@ A vision to realize under a deadline: Karma is shown at the Crossroads AI hackat
   - **intent:** A visitor sees a floating, rounded light header with the solid lockup, a short descriptor, a "How it works" link and "Try the demo".
   - **success:** The header shows on load; "How it works" moves focus and view to that section; both controls work by keyboard with the visible focus ring.
 - **CAP-2**
-  - **intent:** A visitor sees the main section: dark ground, the light made of dots, the headline, the tagline and "Try the demo".
+  - **intent:** A visitor sees the main section: dark ground, the light made of dots, the tagline as the headline, one support line and "Try the demo".
   - **success:** No text sits on the dots; the dots are `aria-hidden`; any movement stops under `prefers-reduced-motion: reduce`.
 - **CAP-3**
   - **intent:** A visitor learns how Karma works in four steps: reads the documents, builds the case card, ranks recruiting trials, shows every criterion.
