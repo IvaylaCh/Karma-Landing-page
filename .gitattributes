@@ -1,0 +1,8 @@
+# Keep Unix line endings in the repo and the working tree on every system,
+# so a fresh build matches the committed dist/ byte for byte.
+* text=auto eol=lf
+
+*.woff2 binary
+*.zip binary
+*.png binary
+*.ico binary
