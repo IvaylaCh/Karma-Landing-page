@@ -1,0 +1,53 @@
+- id: "1"
+  title: Page scaffold and content file
+  description: >-
+    Set up the build script, content.json (fixed strings from page-sections.md plus
+    length-matched placeholders), the Tailwind v4 theme, self-hosted fonts and Twin logos,
+    and an empty page ending in the footer sentence (CAP-8, CAP-9).
+  done_checkpoint: true
+  invoke_dev_with: >-
+    Build-time only: the script reads content.json and writes the HTML; never fetch
+    content.json in the browser. No Google Fonts; use design-system/fonts/.
+- id: "2"
+  title: Header and main section
+  description: >-
+    Build the floating header bar and the dark main section: the tagline as headline,
+    the support line, "Try the demo" and the dot light with its sweep (CAP-1, CAP-2).
+  spec_checkpoint: true
+  done_checkpoint: true
+  invoke_dev_with: >-
+    Board A of the design canvas for layout, board B for the dot light; grain off.
+    DESIGN.md and EXPERIENCE.md win on conflict with either board.
+- id: "3"
+  title: How it works
+  description: >-
+    Build the how-it-works section as a numbered list of four rows with hairline
+    dividers (CAP-3).
+- id: "4"
+  title: The four states
+  description: >-
+    Build the state legend and the criteria card with five rows of one trial's criteria,
+    each with state, evidence and source chip (CAP-4).
+- id: "5"
+  title: The demo
+  description: >-
+    Build the demo section: heading and lead beside the demo case card, with "Find trials"
+    and "See the documents" linking to a placeholder (CAP-5).
+- id: "6"
+  title: What Karma does not do and the closing band
+  description: >-
+    Build the three "does not" columns and the centred closing band with the dotted
+    lockup, tagline and "Try the demo" (CAP-6, CAP-7).
+- id: "7"
+  title: Whole-page check
+  description: >-
+    Check the success signal: Wi-Fi off, 125% zoom, 360px width, forbidden-word search,
+    "Try the demo" exactly three times; fix what fails.
+  done_checkpoint: true
+- id: "8"
+  title: Real copy
+  description: >-
+    Phase 2: replace the placeholders in content.json with the real copy, taking demo
+    values from design-system/components/DemoCaseCard/preview.html (CAP-9).
+  spec_checkpoint: true
+  invoke_dev_with: Change only content.json.
