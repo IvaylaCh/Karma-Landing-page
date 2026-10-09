@@ -18,7 +18,13 @@ Built for the Crossroads AI hackathon, Sofia, 10–11 October 2026. The demo run
 
 ## Commands
 
-None yet. When the app code lands, list the install, run, test and lint commands here.
+Landing page (Node 22):
+
+- `npm install` installs the pinned Tailwind CLI.
+- `npm run build` fills `src/index.html` from `src/content.json`, compiles `src/styles.css`, and writes the static page with its fonts and logos to `dist/`. Open `dist/index.html` from disk. Commit `dist/`: it is the offline demo copy.
+- `npm test` runs the slot-filling tests.
+
+All visible text lives in `src/content.json`; the template holds only `{{dotted.key}}` slots. No lint yet. When the app code lands, list its commands here too.
 
 ## Product rules (never bend)
 

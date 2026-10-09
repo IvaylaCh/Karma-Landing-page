@@ -1,0 +1,19 @@
+/* The landing page stylesheet. Tailwind compiles it to dist/styles.css. */
+
+/* source(none): scan only the files named below, not the whole repo. */
+@import "tailwindcss" source(none);
+@import "../design-system/assets/Code/karma-tailwind-v4-theme.css";
+
+@source "./index.html";
+
+/* Landing page delta from DESIGN.md: a 1280px column and the page side padding. */
+@theme {
+  --container-landing: 1280px;
+  --spacing-side: clamp(20px, 5vw, 64px);
+}
+
+@layer base {
+  body {
+    @apply bg-page text-ink font-sans;
+  }
+}

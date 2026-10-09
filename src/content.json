@@ -1,0 +1,66 @@
+{
+  "meta": {
+    "title": "Karma: every criterion cited. Nothing inferred.",
+    "description": "[Meta description: one sentence on what Karma does for research coordinators, about twenty-five words in all]"
+  },
+  "logo": {
+    "alt": "Karma"
+  },
+  "action": "Try the demo",
+  "nav": {
+    "howItWorks": "How it works"
+  },
+  "tagline": "Every criterion cited. Nothing inferred.",
+  "badge": {
+    "fictional": "Fictional patient",
+    "frozen": "Frozen demo"
+  },
+  "state": {
+    "met": "met — the documents support it",
+    "notMet": "not met — the documents contradict it",
+    "notFound": "not found — the documents don't contain the information",
+    "clinician": "needs a clinician — a judgment call Karma never makes"
+  },
+  "missing": "not in the documents",
+  "footer": "Karma organizes and cites documents. It does not interpret, recommend or decide.",
+  "header": {
+    "descriptor": "[Descriptor: four words]"
+  },
+  "hero": {
+    "support": "[Support line under the headline: one sentence of about eighteen words for coordinators]"
+  },
+  "howItWorks": {
+    "eyebrow": "01 / How it works",
+    "title": "[How it works title: six words]",
+    "steps": {
+      "1": { "title": "[Step 1 title: four words]", "body": "[How it works, step 1: one sentence of about eighteen words on reading]" },
+      "2": { "title": "[Step 2 title: four words]", "body": "[How it works, step 2: one sentence of about eighteen words on the card]" },
+      "3": { "title": "[Step 3 title: four words]", "body": "[How it works, step 3: one sentence of about eighteen words on ranking]" },
+      "4": { "title": "[Step 4 title: four words]", "body": "[How it works, step 4: one sentence of about eighteen words on criteria]" }
+    }
+  },
+  "states": {
+    "eyebrow": "02 / The four states",
+    "title": "[Four states title: six words]",
+    "lead": "[Four states lead: one sentence of about twenty words on why there are exactly four]"
+  },
+  "demo": {
+    "eyebrow": "03 / The demo",
+    "title": "[Demo title: five words]",
+    "lead": "[Demo lead: two sentences of about thirty words on the fictional patient and the frozen data]",
+    "primary": "Find trials",
+    "secondary": "See the documents"
+  },
+  "doesNotDo": {
+    "eyebrow": "04 / What Karma does not do",
+    "title": "[Does not do title: six words]",
+    "items": {
+      "1": { "title": "[Statement 1 title: four words]", "body": "[Statement 1: one sentence of about sixteen words]" },
+      "2": { "title": "[Statement 2 title: four words]", "body": "[Statement 2: one sentence of about sixteen words]" },
+      "3": { "title": "[Statement 3 title: four words]", "body": "[Statement 3: one sentence of about sixteen words]" }
+    }
+  },
+  "closing": {
+    "line": "[Closing line: one sentence of about ten words]"
+  }
+}

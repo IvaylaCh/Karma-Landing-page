@@ -1,0 +1,18 @@
+{
+  "name": "karma-landing-page",
+  "version": "0.1.0",
+  "private": true,
+  "description": "The Karma landing page, built from content.json into a static page in dist/.",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test scripts/fill.test.mjs scripts/build.test.mjs"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "4.3.3",
+    "tailwindcss": "4.3.3"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
