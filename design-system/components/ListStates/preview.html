@@ -1,0 +1,33 @@
+<!-- @dsCard group="Feedback" height=400 width=1200 -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Empty, loading and error — preview</title>
+</head>
+<body class="font-sans text-body text-ink antialiased bg-page p-6">
+
+<div class="grid grid-cols-3 gap-5">
+  <section class="rounded-2xl border border-line bg-surface px-6 py-10 text-center" aria-label="Empty">
+    <p class="text-label uppercase text-ink-secondary">Empty</p>
+    <h3 class="mt-3 text-heading text-ink">No recruiting trials for these search terms</h3>
+    <p class="mt-2 text-body text-ink-secondary">ClinicalTrials.gov returned nothing for KRAS G12C · non-small cell lung cancer · Bulgaria.</p>
+    <button type="button" class="mt-5 inline-flex h-10 items-center justify-center gap-2 rounded-lg px-4 text-body font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus-ring disabled:cursor-not-allowed border border-control bg-surface text-ink hover:border-control-hover hover:bg-page disabled:border-line disabled:bg-surface disabled:text-disabled-ink">Change search terms</button>
+  </section>
+  <section class="rounded-2xl border border-line bg-surface" aria-label="Loading" aria-busy="true">
+    <div class="flex items-center gap-2 border-b border-line px-4 py-3" role="status" aria-live="polite">
+      <svg class="size-5 shrink-0 text-link motion-safe:animate-spin" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3.25a6.75 6.75 0 1 1-6.75 6.75" /></svg>
+      <p class="text-body font-medium text-ink">Reading documents · 4 of 6</p>
+    </div>
+    <div class="space-y-2.5 border-t border-line px-4 py-4 first:border-t-0" aria-hidden="true"><div class="h-3.5 w-4/5 rounded bg-surface-sunken motion-safe:animate-pulse"></div><div class="h-3.5 w-2/5 rounded bg-surface-sunken motion-safe:animate-pulse"></div><div class="h-7 w-28 rounded-full bg-surface-sunken motion-safe:animate-pulse"></div></div><div class="space-y-2.5 border-t border-line px-4 py-4 first:border-t-0" aria-hidden="true"><div class="h-3.5 w-3/5 rounded bg-surface-sunken motion-safe:animate-pulse"></div><div class="h-3.5 w-2/5 rounded bg-surface-sunken motion-safe:animate-pulse"></div><div class="h-7 w-28 rounded-full bg-surface-sunken motion-safe:animate-pulse"></div></div><div class="space-y-2.5 border-t border-line px-4 py-4 first:border-t-0" aria-hidden="true"><div class="h-3.5 w-2/3 rounded bg-surface-sunken motion-safe:animate-pulse"></div><div class="h-3.5 w-2/5 rounded bg-surface-sunken motion-safe:animate-pulse"></div><div class="h-7 w-28 rounded-full bg-surface-sunken motion-safe:animate-pulse"></div></div>
+  </section>
+  <section class="rounded-2xl border border-line bg-surface px-6 py-10 text-center" role="alert" aria-label="Error">
+    <p class="text-label uppercase text-ink-secondary">Error</p>
+    <div class="mt-3 flex justify-center"><svg class="size-6 shrink-0 text-ink" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="6.75"/><path d="M5.25 14.75l9.5-9.5"/></svg></div>
+    <h3 class="mt-2 text-heading text-ink">ClinicalTrials.gov didn’t answer</h3>
+    <p class="mt-2 text-body text-ink-secondary">The case card and documents are unaffected. The frozen demo works without a network.</p>
+    <button type="button" class="mt-5 inline-flex h-10 items-center justify-center gap-2 rounded-lg px-4 text-body font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus-ring disabled:cursor-not-allowed border border-control bg-surface text-ink hover:border-control-hover hover:bg-page disabled:border-line disabled:bg-surface disabled:text-disabled-ink">Try again</button>
+  </section>
+</div>
+</body>
+</html>

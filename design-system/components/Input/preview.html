@@ -1,0 +1,17 @@
+<!-- @dsCard group="Inputs" height=280 width=1000 -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Input with label — preview</title>
+</head>
+<body class="font-sans text-body text-ink antialiased bg-page p-6">
+
+<div class="grid max-w-4xl grid-cols-2 gap-6">
+  <div><label for="i1" class="block text-small font-semibold text-ink">Trial ID</label><input id="i1" type="text" placeholder="NCT…" class="mt-1.5 h-10 w-full rounded-lg border border-control bg-surface px-3 text-body text-ink placeholder:text-ink-muted hover:border-control-hover disabled:cursor-not-allowed disabled:border-line disabled:bg-surface-sunken disabled:text-disabled-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus-ring" aria-describedby="i1-help"><p id="i1-help" class="mt-1.5 text-small text-ink-secondary">Paste an NCT ID from ClinicalTrials.gov.</p></div>
+  <div><label for="i2" class="block text-small font-semibold text-ink">Trial ID — focus</label><input id="i2" type="text" placeholder="NCT…" class="mt-1.5 h-10 w-full rounded-lg border border-control bg-surface px-3 text-body text-ink placeholder:text-ink-muted hover:border-control-hover disabled:cursor-not-allowed disabled:border-line disabled:bg-surface-sunken disabled:text-disabled-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus-ring outline outline-2 outline-offset-2 outline-focus-ring" value="NCT0941" aria-describedby="i2-help"><p id="i2-help" class="mt-1.5 text-small text-ink-secondary">Paste an NCT ID from ClinicalTrials.gov.</p></div>
+  <div><label for="i3" class="block text-small font-semibold text-ink">Trial ID — error</label><input id="i3" type="text" placeholder="NCT…" class="mt-1.5 h-10 w-full rounded-lg border-2 border-ink bg-surface px-3 text-body text-ink placeholder:text-ink-muted hover:border-control-hover disabled:cursor-not-allowed disabled:border-line disabled:bg-surface-sunken disabled:text-disabled-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus-ring" value="9412345" aria-invalid="true" aria-describedby="i3-err"><p id="i3-err" class="mt-1.5 flex items-center gap-1.5 text-small font-medium text-ink"><svg class="size-4 shrink-0 " viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="6.75"/><path d="M5.25 14.75l9.5-9.5"/></svg>Start the ID with NCT, for example NCT09412345.</p></div>
+  <div><label for="i4" class="block text-small font-semibold text-ink">Trial ID — disabled</label><input id="i4" type="text" placeholder="NCT…" class="mt-1.5 h-10 w-full rounded-lg border border-control bg-surface px-3 text-body text-ink placeholder:text-ink-muted hover:border-control-hover disabled:cursor-not-allowed disabled:border-line disabled:bg-surface-sunken disabled:text-disabled-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus-ring" aria-describedby="i4-help" disabled><p id="i4-help" class="mt-1.5 text-small text-ink-secondary">Site mode is off in the frozen demo.</p></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,413 @@
+{
+  "manifestVersion": 3,
+  "name": "Karma",
+  "namespace": "Karma",
+  "files": [
+    "1-dos-and-donts.md",
+    "2-tailwind.md",
+    "3-accessibility.md",
+    "assets/Code/README.md",
+    "assets/Code/karma-tailwind-build.mjs",
+    "assets/Code/karma-tailwind-v3-preset.js",
+    "assets/Code/karma-tailwind-v4-theme.css",
+    "assets/Icons/README.md",
+    "assets/Logos/README.md",
+    "components/AppHeader/README.md",
+    "components/Button/README.md",
+    "components/CaseCardSection/README.md",
+    "components/CohortSummary/README.md",
+    "components/CountPill/README.md",
+    "components/CountsLine/README.md",
+    "components/CriterionMatrix/README.md",
+    "components/DemoBadge/README.md",
+    "components/DemoCaseCard/README.md",
+    "components/DocumentsTable/README.md",
+    "components/EvidencePanel/README.md",
+    "components/FieldRow/README.md",
+    "components/FileDropZone/README.md",
+    "components/FilterChip/README.md",
+    "components/Footer/README.md",
+    "components/Input/README.md",
+    "components/ListStates/README.md",
+    "components/SiteModeRow/README.md",
+    "components/SourceChip/README.md",
+    "components/SourceGroup/README.md",
+    "components/StateLegend/README.md",
+    "components/StatePill/README.md",
+    "components/TextLink/README.md",
+    "components/TimelineItem/README.md",
+    "components/TrialRow/README.md",
+    "components/Wordmark/README.md",
+    "components/bundle.css",
+    "fonts/Inter-Variable.woff2",
+    "tokens.css"
+  ],
+  "libraries": [],
+  "components": [
+    {
+      "name": "AppHeader",
+      "group": "App frame",
+      "summary": "The 64px white bar on every screen: wordmark, tagline, the Frozen demo badge when the frozen demo runs, and the main navigation."
+    },
+    {
+      "name": "Button",
+      "group": "Actions",
+      "summary": "Three variants: primary for the one action a view exists for, secondary for the rest, ghost for quiet actions inside dense rows."
+    },
+    {
+      "name": "CaseCardSection",
+      "group": "Evidence",
+      "summary": "A titled group of field rows on the case card, with compact forms for sections the documents say little or nothing about."
+    },
+    {
+      "name": "CohortSummary",
+      "group": "Trials",
+      "summary": "For a trial with several cohorts: the best-matching cohort with its counts, and every other cohort collapsed to one row with its own counts."
+    },
+    {
+      "name": "CountPill",
+      "group": "States",
+      "summary": "A state pill with a number in front, so it reads as a short sentence: \"6 met\", \"7 need a clinician\"."
+    },
+    {
+      "name": "CountsLine",
+      "group": "States",
+      "summary": "The four counts as one line of text with icons, \"6 met · 0 not met · 9 not found · 7 need a clinician\", for places where pills would be too heavy."
+    },
+    {
+      "name": "CriterionMatrix",
+      "group": "Trials",
+      "summary": "Every inclusion and exclusion criterion of one trial, each with its state, the evidence quote and the document and page, filterable by state."
+    },
+    {
+      "name": "DemoBadge",
+      "group": "Status",
+      "summary": "Two badges that must never be missed: Fictional patient on every demo patient, Frozen demo whenever the app runs the frozen demo data."
+    },
+    {
+      "name": "DemoCaseCard",
+      "group": "Landing",
+      "summary": "The landing page card that introduces the fictional demo patient and starts the demo with \"Find trials\"."
+    },
+    {
+      "name": "DocumentsTable",
+      "group": "Evidence",
+      "summary": "The list of the case's documents, numbered in the order they were added; the numbers are the ones every compact source chip uses."
+    },
+    {
+      "name": "EvidencePanel",
+      "group": "Evidence",
+      "summary": "The right-side panel that shows why a criterion has its state: the reasoning in one line, the trial's own wording, every source as a tab, the verbatim quote an…"
+    },
+    {
+      "name": "FieldRow",
+      "group": "Evidence",
+      "summary": "One line of the case card: a label, the value exactly as the documents give it, and its sources; or \"not in the documents\"."
+    },
+    {
+      "name": "FileDropZone",
+      "group": "Inputs",
+      "summary": "Where a coordinator adds one patient's documents; it numbers them in the order they will be cited."
+    },
+    {
+      "name": "FilterChip",
+      "group": "Trials",
+      "summary": "A toggle above the criterion matrix that shows only the rows in one state, with the count beside each state."
+    },
+    {
+      "name": "Footer",
+      "group": "App frame",
+      "summary": "The disclaimer line at the foot of every screen: \"Karma organizes and cites documents."
+    },
+    {
+      "name": "Input",
+      "group": "Inputs",
+      "summary": "A text field with its label above and its help or error below; errors are ink, not red."
+    },
+    {
+      "name": "ListStates",
+      "group": "Feedback",
+      "summary": "How every list in Karma looks when it has nothing to show, is still working, or could not get its data."
+    },
+    {
+      "name": "SiteModeRow",
+      "group": "Trials",
+      "summary": "One patient against one trial in site mode: name, Fictional patient badge, the four count pills and the first not met criterion with its quote and source."
+    },
+    {
+      "name": "SourceChip",
+      "group": "Evidence",
+      "summary": "A small button that names the exact document and page a value came from, and opens it."
+    },
+    {
+      "name": "SourceGroup",
+      "group": "Evidence",
+      "summary": "One chip that stands for many sources (\"8 sources in 5 documents\") and opens in place, so a value with eight citations stays one line tall."
+    },
+    {
+      "name": "StateLegend",
+      "group": "States",
+      "summary": "Says what the four states mean, in the product's own words, wherever states first appear on a screen."
+    },
+    {
+      "name": "StatePill",
+      "group": "States",
+      "summary": "Shows one criterion's state as colour, icon and word together, which is the only way a state may appear."
+    },
+    {
+      "name": "TextLink",
+      "group": "Actions",
+      "summary": "Links in the bright blue accent (link, an alias of accent): underlined inside sentences, plain where their place makes them obvious (NCT IDs, \"Open the criteri…"
+    },
+    {
+      "name": "TimelineItem",
+      "group": "Evidence",
+      "summary": "One dated event from the documents, in their words, with the sources it came from."
+    },
+    {
+      "name": "TrialRow",
+      "group": "Trials",
+      "summary": "One recruiting trial in the ranked list: rank, ID, phase, status, countries, title, the four count pills and the way into its criterion matrix."
+    },
+    {
+      "name": "Wordmark",
+      "group": "Brand",
+      "summary": "Three ways to write Karma; each works in the 64px header, on a title slide and in one colour, and each has a favicon mark."
+    }
+  ],
+  "assetGroups": [
+    {
+      "name": "Logos",
+      "tile": "l",
+      "order": [
+        "karma-a-wordmark.svg",
+        "karma-a-mark.svg",
+        "karma-b-wordmark.svg",
+        "karma-b-mark.svg",
+        "karma-c-wordmark.svg",
+        "karma-c-mark.svg",
+        "karma-c-mark-two-colour.svg"
+      ],
+      "files": [
+        {
+          "path": "assets/Logos/karma-a-wordmark.svg",
+          "id": "01835f2a6e965d0acb7a37b7ab59122a"
+        },
+        {
+          "path": "assets/Logos/karma-a-mark.svg",
+          "id": "b7fe8884b9c3bd83c53160d79a7d8758"
+        },
+        {
+          "path": "assets/Logos/karma-b-wordmark.svg",
+          "id": "cdf30ddb093565ab7dc06403a8bfe057"
+        },
+        {
+          "path": "assets/Logos/karma-b-mark.svg",
+          "id": "86af745255555c0f1ae3973a9eba8e05"
+        },
+        {
+          "path": "assets/Logos/karma-c-wordmark.svg",
+          "id": "9b3336723233851b2e5370f513c80e58"
+        },
+        {
+          "path": "assets/Logos/karma-c-mark.svg",
+          "id": "7d09cdff636a0fbe6eac604664e5730c"
+        },
+        {
+          "path": "assets/Logos/karma-c-mark-two-colour.svg",
+          "id": "10c63dd1717c5401e493ba32155205f5"
+        }
+      ]
+    },
+    {
+      "name": "Icons",
+      "tile": "s",
+      "order": [
+        "state-met.svg",
+        "state-not-met.svg",
+        "state-not-found.svg",
+        "state-clinician.svg",
+        "document.svg",
+        "documents.svg",
+        "chevron-down.svg",
+        "chevron-right.svg",
+        "close.svg",
+        "upload.svg",
+        "unavailable.svg",
+        "spinner.svg"
+      ],
+      "files": [
+        {
+          "path": "assets/Icons/state-met.svg",
+          "id": "675f7c61b76f9cfec2f044b7852637af"
+        },
+        {
+          "path": "assets/Icons/state-not-met.svg",
+          "id": "ea17564eaa32e8d4e93bd0c716945f0b"
+        },
+        {
+          "path": "assets/Icons/state-not-found.svg",
+          "id": "4c69714f4cbf9883b020dca42f8e49bf"
+        },
+        {
+          "path": "assets/Icons/state-clinician.svg",
+          "id": "b3e1eb15e9906fca370ec47074f4642b"
+        },
+        {
+          "path": "assets/Icons/document.svg",
+          "id": "0ee5fbab48fb6b39654b590d44f9bc2e"
+        },
+        {
+          "path": "assets/Icons/documents.svg",
+          "id": "0fa19246c3e784888688afa8e8756133"
+        },
+        {
+          "path": "assets/Icons/chevron-down.svg",
+          "id": "40a3816bc47079a0344e38a88da7719a"
+        },
+        {
+          "path": "assets/Icons/chevron-right.svg",
+          "id": "0f06ca9fe1d951677f7cf978bd458435"
+        },
+        {
+          "path": "assets/Icons/close.svg",
+          "id": "e044d0cdfd827ddfecfb67dad5073fd4"
+        },
+        {
+          "path": "assets/Icons/upload.svg",
+          "id": "75a2f539e210561e00b581cb790f6abe"
+        },
+        {
+          "path": "assets/Icons/unavailable.svg",
+          "id": "38bbc92a5536647b50efc0ef31f1f384"
+        },
+        {
+          "path": "assets/Icons/spinner.svg",
+          "id": "e62ab4ea6ff790c990a04a944f1eb79d"
+        }
+      ]
+    },
+    {
+      "name": "Code"
+    }
+  ],
+  "storage": {
+    "files": {
+      "assets/Icons/chevron-down.svg": {
+        "store": "blob",
+        "id": "40a3816bc47079a0344e38a88da7719a",
+        "bytes": 242,
+        "type": "image/svg+xml"
+      },
+      "assets/Icons/chevron-right.svg": {
+        "store": "blob",
+        "id": "0f06ca9fe1d951677f7cf978bd458435",
+        "bytes": 242,
+        "type": "image/svg+xml"
+      },
+      "assets/Icons/close.svg": {
+        "store": "blob",
+        "id": "e044d0cdfd827ddfecfb67dad5073fd4",
+        "bytes": 247,
+        "type": "image/svg+xml"
+      },
+      "assets/Icons/document.svg": {
+        "store": "blob",
+        "id": "0ee5fbab48fb6b39654b590d44f9bc2e",
+        "bytes": 395,
+        "type": "image/svg+xml"
+      },
+      "assets/Icons/documents.svg": {
+        "store": "blob",
+        "id": "0fa19246c3e784888688afa8e8756133",
+        "bytes": 405,
+        "type": "image/svg+xml"
+      },
+      "assets/Icons/spinner.svg": {
+        "store": "blob",
+        "id": "e62ab4ea6ff790c990a04a944f1eb79d",
+        "bytes": 255,
+        "type": "image/svg+xml"
+      },
+      "assets/Icons/state-clinician.svg": {
+        "store": "blob",
+        "id": "b3e1eb15e9906fca370ec47074f4642b",
+        "bytes": 382,
+        "type": "image/svg+xml"
+      },
+      "assets/Icons/state-met.svg": {
+        "store": "blob",
+        "id": "675f7c61b76f9cfec2f044b7852637af",
+        "bytes": 295,
+        "type": "image/svg+xml"
+      },
+      "assets/Icons/state-not-found.svg": {
+        "store": "blob",
+        "id": "4c69714f4cbf9883b020dca42f8e49bf",
+        "bytes": 350,
+        "type": "image/svg+xml"
+      },
+      "assets/Icons/state-not-met.svg": {
+        "store": "blob",
+        "id": "ea17564eaa32e8d4e93bd0c716945f0b",
+        "bytes": 311,
+        "type": "image/svg+xml"
+      },
+      "assets/Icons/unavailable.svg": {
+        "store": "blob",
+        "id": "38bbc92a5536647b50efc0ef31f1f384",
+        "bytes": 282,
+        "type": "image/svg+xml"
+      },
+      "assets/Icons/upload.svg": {
+        "store": "blob",
+        "id": "75a2f539e210561e00b581cb790f6abe",
+        "bytes": 339,
+        "type": "image/svg+xml"
+      },
+      "assets/Logos/karma-a-mark.svg": {
+        "store": "blob",
+        "id": "b7fe8884b9c3bd83c53160d79a7d8758",
+        "bytes": 756,
+        "type": "image/svg+xml"
+      },
+      "assets/Logos/karma-a-wordmark.svg": {
+        "store": "blob",
+        "id": "01835f2a6e965d0acb7a37b7ab59122a",
+        "bytes": 2780,
+        "type": "image/svg+xml"
+      },
+      "assets/Logos/karma-b-mark.svg": {
+        "store": "blob",
+        "id": "86af745255555c0f1ae3973a9eba8e05",
+        "bytes": 580,
+        "type": "image/svg+xml"
+      },
+      "assets/Logos/karma-b-wordmark.svg": {
+        "store": "blob",
+        "id": "cdf30ddb093565ab7dc06403a8bfe057",
+        "bytes": 4564,
+        "type": "image/svg+xml"
+      },
+      "assets/Logos/karma-c-mark-two-colour.svg": {
+        "store": "blob",
+        "id": "10c63dd1717c5401e493ba32155205f5",
+        "bytes": 1036,
+        "type": "image/svg+xml"
+      },
+      "assets/Logos/karma-c-mark.svg": {
+        "store": "blob",
+        "id": "7d09cdff636a0fbe6eac604664e5730c",
+        "bytes": 1036,
+        "type": "image/svg+xml"
+      },
+      "assets/Logos/karma-c-wordmark.svg": {
+        "store": "blob",
+        "id": "9b3336723233851b2e5370f513c80e58",
+        "bytes": 5535,
+        "type": "image/svg+xml"
+      }
+    },
+    "blobBytesUsed": 20032
+  }
+}
