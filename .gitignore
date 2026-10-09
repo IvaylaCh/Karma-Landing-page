@@ -1,0 +1,6 @@
+# BMAD: generated workflow copies and personal settings
+_bmad/render/
+_bmad/custom/config.user.toml
+
+# BMad Builder skills installed by mistake; this project does not use them
+.claude/skills/
